@@ -20,7 +20,9 @@ class ImageProcessorLoader(tf.keras.utils.Sequence):
 		batch_x = self.x[idx * self.batch_size:(idx + 1) * self.batch_size]
 		batch_y = self.y[idx * self.batch_size:(idx + 1) * self.batch_size]
 		return numpy.array([ObradiSliko(imread('KoncnaUcnaZbirka/Faktor2/' + file_name)) for file_name in batch_x]), numpy.array([ObradiSliko(imread('KoncnaUcnaZbirka/Faktor2/' + file_name)) for file_name in batch_x])
-		# return numpy.array([ObradiSliko(imread(file_name)) for file_name in batch_x]), numpy.array(batch_y)
+		# return numpy.array([ObradiSliko(imread(file_name)) for file_name in batch_x]), numpy.array(batch_y) 
+		# za vsako sliko v direktorijo zelimo podati isto sliko v vhod in v target - "na izhod".
+		# Tak zelimo povedati - ovo dobis in tako to mora na koncu zgledati - proces ucenja
 
 
 # 33.6
